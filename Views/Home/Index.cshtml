@@ -1,0 +1,36 @@
+﻿@model CheckpointIX_Calculo_IMC.Models.ImcViewModel
+
+@{
+    ViewData["Title"] = "Calculadora de IMC";
+}
+
+<h1>Calculadora de IMC</h1>
+<p>Informe seu peso e altura para calcular o índice de massa corporal no servidor.</p>
+
+<form asp-action="Index" method="post" class="row g-3">
+    <div class="col-md-6">
+        <label asp-for="Peso" class="form-label"></label>
+        <input asp-for="Peso" class="form-control" step="0.1" />
+        <span asp-validation-for="Peso" class="text-danger"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Altura" class="form-label"></label>
+        <input asp-for="Altura" class="form-control" step="0.01" />
+        <span asp-validation-for="Altura" class="text-danger"></span>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Calcular IMC</button>
+    </div>
+</form>
+
+<div asp-validation-summary="ModelOnly" class="text-danger mt-3"></div>
+
+@if (Model.Imc.HasValue)
+{
+    <div class="alert alert-success mt-4" role="alert">
+        <h4 class="alert-heading">Resultado</h4>
+        <p><strong>IMC:</strong> @Model.Imc</p>
+        <p><strong>Classificação:</strong> @Model.Classificacao</p>
+    </div>
+}

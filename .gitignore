@@ -1,0 +1,22 @@
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET runtime files
+*.db
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
