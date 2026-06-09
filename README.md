@@ -1,4 +1,4 @@
-
+<img width="1307" height="956" alt="Captura de tela 2026-06-09 131407" src="https://github.com/user-attachments/assets/da98604e-f009-4d5a-920c-60bfc942bf23" />
 
 
 Primeiro, criei uma classe chamada ImcViewModel, que é responsável por armazenar os dados informados pelo usuário, como peso e altura, além do resultado do IMC e sua classificação.
